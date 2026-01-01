@@ -1,0 +1,136 @@
+.layout {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.container {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.pageSubtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Sections Technologies, Certifications & Skills améliorées */
+.skillsSection, .certSection, .techSection {
+  margin-top: 4rem;
+  padding: 1.5rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.05);
+}
+
+/* Titres des sections */
+.skillsSection h2, .certSection h2, .techSection h2 {
+  font-size: 1.8rem;
+  color: #222;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.3rem;
+}
+
+/* Listes flexibles avec espaces */
+.techList, .certList, .skillsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Items "cartes" */
+.techItem, .certItem, .skillItem {
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  font-weight: 600;
+  color: #444;
+  flex: 1 1 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+.techItem:hover, .certItem:hover, .skillItem:hover {
+  box-shadow: 0 6px 12px rgb(0 0 0 / 0.15);
+}
+
+/* Spécifique aux certifications : année plus discrète */
+.certYear {
+  font-style: italic;
+  font-weight: 400;
+  color: #888;
+  margin-left: 0.6rem;
+  white-space: nowrap;
+}
+
+/* Pour skills, différencier nom et niveau */
+.skillItem {
+  justify-content: space-between;
+}
+.skillName {
+  font-weight: 700;
+  color: #222;
+}
+.skillLevel {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .techList, .certList, .skillsList {
+    flex-direction: column;
+  }
+  .techItem, .certItem, .skillItem {
+    flex: unset;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .skillLevel {
+    margin-left: auto;
+  }
+}
