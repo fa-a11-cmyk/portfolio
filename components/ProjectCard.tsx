@@ -10,7 +10,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ project }: ProjectCardProps) => {
   const [expanded, setExpanded] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const isSvg = project.logo.endsWith('.svg');
+  const isImage = project.logo.endsWith('.svg') || project.logo.endsWith('.png') || project.logo.endsWith('.jpg') || project.logo.endsWith('.jpeg');
 
   const handleToggleExpand = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -26,23 +26,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
     <div className={`${styles.content} ${expanded ? styles.expanded : ''}`}>
       <div className={styles.textSection}>
         <div className={styles.iconWrapper}>
-          {isSvg ? (
-            <img
-              src={project.logo}
-              alt={`${project.title} logo`}
-              className={styles.icon}
-              width={64}
-              height={64}
-            />
-          ) : (
-            <Image
-              src={project.logo}
-              alt={`${project.title} logo`}
-              width={64}
-              height={64}
-              className={styles.icon}
-            />
-          )}
+          <img
+            src={project.logo}
+            alt={`${project.title} logo`}
+            className={styles.icon}
+            width={64}
+            height={64}
+          />
         </div>
         <h3 className={styles.title}>{project.title}</h3>
         <p className={styles.description}>{project.description}</p>
@@ -67,23 +57,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeBtn} onClick={handleCloseModal}>✕</button>
             <div className={styles.modalHeader}>
-              {isSvg ? (
-                <img
-                  src={project.logo}
-                  alt={`${project.title} logo`}
-                  className={styles.modalIcon}
-                  width={48}
-                  height={48}
-                />
-              ) : (
-                <Image
-                  src={project.logo}
-                  alt={`${project.title} logo`}
-                  width={48}
-                  height={48}
-                  className={styles.modalIcon}
-                />
-              )}
+              <img
+                src={project.logo}
+                alt={`${project.title} logo`}
+                className={styles.modalIcon}
+                width={48}
+                height={48}
+              />
               <h2 className={styles.modalTitle}>{project.title}</h2>
             </div>
             <p className={styles.modalDescription}>{project.description}</p>
