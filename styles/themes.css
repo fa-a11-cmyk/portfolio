@@ -1,9 +1,35 @@
-/* GitHub Dark */
+/* Professional Dark Theme - Default */
 :root {
+  --main-bg: #0d1117;
+  --bg-text: rgba(100, 116, 139, 0.35);
+  --text-color: #e6edf3;
+  --accent-color: #58a6ff;
+  --titlebar-bg: #161b22;
+  --sidebar-bg: #0d1117;
+  --sidebar-hover-bg: #161b22;
+  --explorer-bg: #161b22;
+  --explorer-hover-bg: #0d1117;
+  --explorer-border: #30363d;
+  --tabs-bg: #161b22;
+  --tab-bg: #161b22;
+  --tab-active-bg: #0d1117;
+  --tab-border: #0d1117;
+  --bottombar-bg: #0d1117;
+  --bottombar-border: #30363d;
+  --button-bg: #238636;
+  --button-text: #ffffff;
+  --bottombar-hover-bg: #30363d;
+  --scrollbar-track-bg: #0d1117;
+  --scrollbar-thumb-bg: #6e7681;
+  --article-bg: #161b22;
+}
+
+/* GitHub Dark */
+[data-theme='github-dark'] {
   --main-bg: #24292e;
   --bg-text: rgba(56, 58, 61, 0.35);
-  --text-color: #efefef;
-  --accent-color: #f9826c;
+  --text-color: #e1e4e8;
+  --accent-color: #f97583;
   --titlebar-bg: #1f2428;
   --sidebar-bg: #24292e;
   --sidebar-hover-bg: #1f2428;
@@ -16,11 +42,11 @@
   --tab-border: #24292e;
   --bottombar-bg: #24292e;
   --bottombar-border: #1b1f23;
-  --button-bg: #176f2c;
-  --button-text: #dcffe4;
+  --button-bg: #28a745;
+  --button-text: #ffffff;
   --bottombar-hover-bg: #4f4f52;
   --scrollbar-track-bg: #24292e;
-  --scrollbar-thumb-bg: #333536;
+  --scrollbar-thumb-bg: #6a737d;
   --article-bg: #1f2428;
 }
 
@@ -28,8 +54,8 @@
 [data-theme='dracula'] {
   --main-bg: #282a36;
   --bg-text: #313340;
-  --text-color: #efefef;
-  --accent-color: #bd93f9;
+  --text-color: #f8f8f2;
+  --accent-color: #ff79c6;
   --titlebar-bg: #1e1f29;
   --sidebar-bg: #343746;
   --sidebar-hover-bg: #3c3d51;
@@ -42,11 +68,11 @@
   --tab-border: #191a21;
   --bottombar-bg: #191a21;
   --bottombar-border: #191a21;
-  --button-bg: #44475a;
-  --button-text: #f8f8f2;
+  --button-bg: #50fa7b;
+  --button-text: #282a36;
   --bottombar-hover-bg: #4f4f52;
   --scrollbar-track-bg: #282a36;
-  --scrollbar-thumb-bg: #454647;
+  --scrollbar-thumb-bg: #6272a4;
   --article-bg: #21222c;
 }
 
@@ -54,8 +80,8 @@
 [data-theme='ayu-dark'] {
   --main-bg: #0a0e14;
   --bg-text: #101620;
-  --text-color: #efefef;
-  --accent-color: #e6b450;
+  --text-color: #e6b450;
+  --accent-color: #39bae6;
   --titlebar-bg: #1f2428;
   --sidebar-bg: #0a0e14;
   --sidebar-hover-bg: #00010a;
@@ -68,45 +94,19 @@
   --tab-border: transparent;
   --bottombar-bg: #0a0e14;
   --bottombar-border: transparent;
-  --button-bg: #e6b450;
+  --button-bg: #39bae6;
   --button-text: #0a0e14;
   --bottombar-hover-bg: #4f4f52;
   --scrollbar-track-bg: #0a0e14;
-  --scrollbar-thumb-bg: #454647;
+  --scrollbar-thumb-bg: #5c6773;
   --article-bg: #10121a;
-}
-
-/* Ayu Mirage */
-[data-theme='ayu-mirage'] {
-  --main-bg: #1f2430;
-  --bg-text: #21242b;
-  --text-color: #efefef;
-  --accent-color: #e6b450;
-  --titlebar-bg: #1f2428;
-  --sidebar-bg: #1f2430;
-  --sidebar-hover-bg: #191e2a;
-  --explorer-bg: #1f2430;
-  --explorer-hover-bg: #191e2a;
-  --explorer-border: transparent;
-  --tabs-bg: #1f2430;
-  --tab-bg: #1f2430;
-  --tab-active-bg: #1f2430;
-  --tab-border: transparent;
-  --bottombar-bg: #1f2430;
-  --bottombar-border: transparent;
-  --button-bg: #e6b450;
-  --button-text: #1f2430;
-  --bottombar-hover-bg: #4f4f52;
-  --scrollbar-track-bg: #1f2430;
-  --scrollbar-thumb-bg: #454647;
-  --article-bg: #252e3d;
 }
 
 /* Nord */
 [data-theme='nord'] {
   --main-bg: #2e3440;
   --bg-text: #3b414d;
-  --text-color: #efefef;
+  --text-color: #eceff4;
   --accent-color: #88c0d0;
   --titlebar-bg: #1f2428;
   --sidebar-bg: #2e3440;
@@ -120,36 +120,10 @@
   --tab-border: transparent;
   --bottombar-bg: #3b4252;
   --bottombar-border: transparent;
-  --button-bg: #434c5e;
-  --button-text: #d8dee9;
+  --button-bg: #81a1c1;
+  --button-text: #eceff4;
   --bottombar-hover-bg: #4f4f52;
   --scrollbar-track-bg: #2e3440;
-  --scrollbar-thumb-bg: #454647;
+  --scrollbar-thumb-bg: #4c566a;
   --article-bg: #363f50;
-}
-
-/* Night Owl */
-[data-theme='night-owl'] {
-  --main-bg: #011627;
-  --bg-text: #031d33;
-  --text-color: #89a4bb;
-  --accent-color: rgb(95, 126, 151);
-  --titlebar-bg: #011627;
-  --sidebar-bg: #011627;
-  --sidebar-hover-bg: #0e293f;
-  --explorer-bg: #011627;
-  --explorer-hover-bg: #0e293f;
-  --explorer-border: transparent;
-  --tabs-bg: #011627;
-  --tab-bg: #01111d;
-  --tab-active-bg: #0b2942;
-  --tab-border: rgb(39, 43, 59);
-  --bottombar-bg: #011627;
-  --bottombar-border: #262a39;
-  --button-bg: rgb(95, 126, 151);
-  --button-text: #fff;
-  --bottombar-hover-bg: #1b222f;
-  --scrollbar-track-bg: #011627;
-  --scrollbar-thumb-bg: #043254;
-  --article-bg: #031d33;
 }

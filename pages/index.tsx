@@ -17,7 +17,7 @@ export default function HomePage() {
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Fatma Adel',", type: 'array-item' },
     { code: "    role: 'Cloud & DevOps Engineer',", type: 'array-item' },
-    { code: "    bio: 'Building resilient cloud solutions using modern DevOps practices'", type: 'array-item' },
+    { code: "    bio: 'Final Year Student | Triple Certified | Multi-Cloud Expert'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
@@ -58,10 +58,10 @@ export default function HomePage() {
         <div className={styles.codeSection}>
           
           <Image
-                      src='/logos/pf.png'
+                      src='/logos/Hm.jpg'
                       alt="logo"
-                      width={400}
-                      height={400}
+                      width={410}
+                      height={410}
                       className={styles.img_profile}
                     />
 
@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className={styles.developerRole}>Cloud & DevOps Engineer</div>
 
          <p className={styles.bio}>
-  I engineer reliable and efficient cloud solutions that drive digital transformation. Passionate about automation, infrastructure as code, and delivering seamless deployment pipelines.
+Final Year Student at EPI Sousse | AWS, Azure & GCP Certified | Skilled in Kubernetes, Terraform, CI/CD, Docker, and monitoring solutions. Seeking a 6-month internship to contribute to innovative cloud infrastructure projects and drive operational excellence.
 </p>
 
 

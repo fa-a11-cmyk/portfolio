@@ -137,14 +137,38 @@
 }
 
 .img_profile {
-  border-radius: 50%;        /* rend l'image circulaire */
-  object-fit: cover;         /* pour bien cadrer l'image dans le cercle */
-  width: 400px;              /* ajuste selon tes besoins */
-  height: 400px;             /* même valeur que width pour garder le cercle */
-  border: 3px solid #fff;    /* facultatif : bord blanc élégant */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ombre douce */
+  border-radius: 50%;
+  object-fit: cover;
+  width: 410px;
+  height: 410px;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.4);
+  animation: profileFloat 3s ease-in-out infinite, profileGlow 3s ease-in-out infinite;
+  transition: all 0.3s ease;
 }
 
+.img_profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(88, 166, 255, 0.6);
+}
+
+@keyframes profileFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes profileGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.4), inset 0 0 30px rgba(88, 166, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(88, 166, 255, 0.6), inset 0 0 30px rgba(88, 166, 255, 0.2);
+  }
+}
 
 /* Syntax Highlighting */
 .function {

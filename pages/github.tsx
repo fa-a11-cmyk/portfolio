@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import GitHubCalendar from 'react-github-calendar';
-import { VscRepo, VscPerson } from 'react-icons/vsc';
+import { VscRepo, VscGithubInverted } from 'react-icons/vsc';
 
 import RepoCard from '@/components/RepoCard';
 import { Repo, User } from '@/types';
@@ -36,24 +37,28 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
               priority
             />
             <div className={styles.userInfo}>
+              <div className={styles.githubIconWrapper}>
+                <VscGithubInverted className={styles.githubIcon} />
+              </div>
               <h2 className={styles.username}>{user.login}</h2>
               <div className={styles.stats}>
                 <div className={styles.statItem}>
                   <VscRepo className={styles.statIcon} />
                   <span>{user.public_repos} repositories</span>
                 </div>
-                <div className={styles.statItem}>
-                  <VscPerson className={styles.statIcon} />
-                  <span>{user.followers} followers</span>
-                </div>
               </div>
+              <Link 
+                href="https://github.com/fa-a11-cmyk?tab=repositories" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.githubLink}
+              >
+                View All →
+              </Link>
             </div>
           </div>
         </div>
 
-        <div className={styles.sectionHeader}>
-          <h3 className={styles.sectionTitle}>Popular Repositories</h3>
-        </div>
         <div className={styles.reposContainer}>
           {repos.map((repo) => (
             <RepoCard key={repo.id} repo={repo} />
