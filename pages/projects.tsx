@@ -10,7 +10,7 @@ const ProjectsPage = () => {
       <header className={styles.header}>
         <h1 className={styles.pageTitle}>My Projects</h1>
         <p className={styles.pageSubtitle}>
-          Here's a collection of my recent work. These projects showcase my skills in web development, design, and problem-solving.
+          Here&apos;s a collection of my recent work. These projects showcase my skills in web development, design, and problem-solving.
         </p>
       </header>
 
