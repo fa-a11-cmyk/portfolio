@@ -19,7 +19,7 @@ const contactItems = [
   },
 
   {
-    social: 'watsapp',
+    social: 'WhatsApp',
     link: '+216 55234910',
     href: 'https://wa.me/+21655234910',
   },
