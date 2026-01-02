@@ -48,7 +48,7 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
                 </div>
               </div>
               <Link 
-                href="https://github.com/fa-a11-cmyk?tab=repositories" 
+                href="https://github.com/fa-a11-cmyk" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.githubLink}

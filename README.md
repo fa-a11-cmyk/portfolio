@@ -1,192 +1,79 @@
-# vscode-portfolio
+# Fatma Adel - Cloud & DevOps Engineer Portfolio
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
+A modern, interactive portfolio website showcasing cloud infrastructure projects and DevOps expertise.
 
-Un portfolio de développeur au thème VS Code construit avec Next.js et déployé sur Vercel.
+**Live Demo:** https://fatma-adel.vercel.app
 
-![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
+## 🚀 Tech Stack
 
-## ✨ Fonctionnalités
+- **Frontend:** React, Next.js, TypeScript
+- **Styling:** CSS Modules
+- **Deployment:** Vercel
+- **Icons:** React Icons
 
-- 🎨 **Thème VS Code** - Interface inspirée de Visual Studio Code
-- 🚀 **Performance optimisée** - Next.js avec optimisations Vercel
-- 📱 **Responsive** - Fonctionne parfaitement sur tous les appareils
-- 🌙 **Thèmes multiples** - GitHub Dark, Dracula, Ayu, Nord
-- 📝 **Articles automatiques** - Intégration Dev.to
-- 🐙 **Repos GitHub** - Affichage automatique de vos projets
-- ⚡ **Animations fluides** - Transitions modernes et élégantes
-- 🔒 **Sécurisé** - Headers de sécurité configurés
+## ✨ Features
 
-## 🗺️ Roadmap
+- 🎨 VS Code-inspired dark theme
+- 📱 Fully responsive design
+- ⚡ Optimized performance (Lighthouse 95+)
+- 🔗 GitHub integration
+- 📊 Project showcase with expandable descriptions
+- 🎯 Professional skills categorization
 
-- [ ] Thèmes et personnalisations
-  - [x] GitHub Dark (défaut)
-  - [ ] One Dark Pro
-  - [x] Dracula
-  - [x] Ayu
-  - [x] Nord
-- [ ] Terminal interactif personnalisé
+## 📋 Project Highlights
 
-## 🚀 Déploiement Rapide
+- **Smartovate** - Multi-cloud backup & disaster recovery
+- **OpenStack Infrastructure** - Enterprise cloud management
+- **Network Anomaly Detection** - AWS-based monitoring
+- **Cavario** - Mobile app for equestrian management
+- **DevWork** - Freelance platform (Flutter + Laravel)
+- **Library Management** - Django web application
+- **Private Cloud** - OpenNebula infrastructure
 
-### Option 1 : Déploiement Automatique (Recommandé)
-
-**Windows :**
-```bash
-.\deploy.bat
-```
-
-**Mac/Linux :**
-```bash
-chmod +x deploy.sh
-./deploy.sh
-```
-
-### Option 2 : Déploiement Manuel
+## 🛠️ Getting Started
 
 ```bash
-# 1. Installer les dépendances
+# Install dependencies
 npm install
 
-# 2. Configurer les variables d'environnement
-# Éditer .env.local avec vos clés API
-
-# 3. Tester localement
+# Run development server
 npm run dev
 
-# 4. Déployer
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
+## 📦 Project Structure
+
+```
+├── pages/              # Next.js pages
+├── components/         # React components
+├── styles/            # CSS modules
+├── data/              # Static data
+├── public/            # Static assets
+└── package.json       # Dependencies
+```
+
+## 🚢 Deployment
+
+```bash
+# Deploy to Vercel
 npm run deploy
 ```
 
-### Option 3 : Interface Vercel
+## 📧 Contact
 
-1. Aller sur https://vercel.com
-2. Cliquer "New Project"
-3. Importer votre repository GitHub
-4. Ajouter les variables d'environnement
-5. Cliquer "Deploy"
+- **GitHub:** https://github.com/fa-a11-cmyk
+- **Email:** fatma.adel@episousse.com.tn
+- **LinkedIn:** https://www.linkedin.com/in/fatma-adel-9667862b6
 
-## 📋 Configuration
+## 📄 License
 
-### Variables d'Environnement
-
-Créez un fichier `.env.local` :
-
-```env
-DEV_TO_API_KEY=your-dev-to-api-key
-GITHUB_API_KEY=your-github-api-key
-NEXT_PUBLIC_GITHUB_USERNAME=your-github-username
-```
-
-**Obtenir les clés :**
-
-- **Dev.to** : https://dev.to/settings/account → API Keys
-- **GitHub** : https://github.com/settings/tokens → Generate new token
-
-## 🛠️ Développement Local
-
-```bash
-# Installer les dépendances
-npm install
-
-# Lancer le serveur de développement
-npm run dev
-
-# Ouvrir http://localhost:3000
-```
-
-## 📁 Structure du Projet
-
-```
-vscode-portfolio/
-├── components/          # Composants React
-├── pages/              # Pages Next.js
-├── styles/             # Fichiers CSS
-├── data/               # Données statiques
-├── public/             # Fichiers statiques
-├── .env.local          # Variables d'environnement
-├── next.config.ts      # Configuration Next.js
-├── vercel.json         # Configuration Vercel
-└── package.json        # Dépendances
-```
-
-## 🎨 Personnalisation
-
-### Modifier le contenu
-
-- **Accueil** : `pages/index.tsx`
-- **À propos** : `pages/about.tsx`
-- **Projets** : `data/projects.ts`
-- **Compétences** : `data/skillsAndCerts.js`
-
-### Modifier les styles
-
-- **Thèmes** : `styles/themes.css`
-- **Composants** : `styles/*.module.css`
-
-## 📚 Ressources
-
-- [Documentation Next.js](https://nextjs.org/docs)
-- [Documentation Vercel](https://vercel.com/docs)
-- [API Dev.to](https://developers.forem.com/api)
-- [API GitHub](https://docs.github.com/en/rest)
-
-## 🚢 Déploiement en Production
-
-```bash
-# Build pour la production
-npm run build
-
-# Tester la build
-npm run start
-
-# Déployer sur Vercel
-npm run deploy
-```
-
-## 🔄 Mise à Jour du Site
-
-Après chaque modification :
-
-```bash
-git add .
-git commit -m "Update: description"
-git push origin main
-```
-
-Vercel redéploiera automatiquement !
-
-## 📊 Performance
-
-- ⚡ Lighthouse Score : 95+
-- 🚀 First Contentful Paint : < 1s
-- 📦 Bundle Size : Optimisé
-
-## 🆘 Dépannage
-
-### Les articles ne s'affichent pas
-- Vérifier que `DEV_TO_API_KEY` est correct
-- Vérifier les logs Vercel
-
-### Les repos ne s'affichent pas
-- Vérifier que `GITHUB_API_KEY` est correct
-- Vérifier que `NEXT_PUBLIC_GITHUB_USERNAME` est correct
-
-### Erreur de build
-```bash
-rm -rf .next node_modules
-npm install
-npm run build
-```
-
-## 📝 Licence
-
-MIT - Libre d'utilisation
-
-## 🤝 Contribution
-
-Les contributions sont bienvenues ! Ouvrez une issue ou une pull request.
+MIT - Feel free to use this portfolio as a template for your own!
 
 ---
 
-**Besoin d'aide ?** Consultez [QUICK_START.md](./QUICK_START.md) ou [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+**Built with ❤️ by Fatma Adel**
