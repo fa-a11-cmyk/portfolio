@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import { projects } from '@/data/projects';
-import { technologies, certifications, skills } from '@/data/skillsAndCerts';
+import { skillsCategories, certifications } from '@/data/skillsAndCerts';
 import styles from '@/styles/ProjectsPage.module.css';
 
 const ProjectsPage = () => {
@@ -10,11 +10,12 @@ const ProjectsPage = () => {
       <header className={styles.header}>
         <h1 className={styles.pageTitle}>My Projects</h1>
         <p className={styles.pageSubtitle}>
-          Here&apos;s a collection of my recent work. These projects showcase my skills in web development, design, and problem-solving.
+          Here&apos;s a collection of my recent work showcasing expertise in cloud infrastructure, DevOps, and full-stack development.
         </p>
       </header>
 
       <section className={styles.projectsSection}>
+        <h2 className={styles.sectionTitle}>Featured Projects</h2>
         <div className={styles.projectsGrid}>
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
@@ -22,38 +23,40 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <section className={styles.techSection}>
-        <h2 className={styles.sectionTitle}>Technologies & Frameworks</h2>
-        <ul className={styles.techList}>
-          {technologies.map((tech, index) => (
-            <li key={index} className={styles.techItem}>
-              {tech}
-            </li>
+      <section className={styles.skillsSection}>
+        <h2 className={styles.sectionTitle}>Skills & Expertise</h2>
+        <div className={styles.skillsContainer}>
+          {skillsCategories.map((category, idx) => (
+            <div key={idx} className={styles.skillCategory}>
+              <h3 className={styles.categoryTitle}>{category.category}</h3>
+              <div className={styles.skillsList}>
+                {category.skills.map((skill, skillIdx) => (
+                  <div key={skillIdx} className={styles.skillItem}>
+                    <div className={styles.skillHeader}>
+                      <span className={styles.skillName}>{skill.name}</span>
+                    </div>
+                    <p className={styles.skillDescription}>{skill.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className={styles.certSection}>
         <h2 className={styles.sectionTitle}>Certifications</h2>
-        <ul className={styles.certList}>
+        <div className={styles.certGrid}>
           {certifications.map((cert, index) => (
-            <li key={index} className={styles.certItem}>
-              <strong>{cert.title}</strong> <span className={styles.certYear}>({cert.year})</span>
-            </li>
+            <div key={index} className={styles.certItem}>
+              <div className={styles.certIcon}>🏆</div>
+              <div className={styles.certContent}>
+                <h4 className={styles.certTitle}>{cert.title}</h4>
+                <span className={styles.certYear}>{cert.year}</span>
+              </div>
+            </div>
           ))}
-        </ul>
-      </section>
-
-      <section className={styles.skillsSection}>
-        <h2 className={styles.sectionTitle}>Skills</h2>
-        <ul className={styles.skillsList}>
-          {skills.map((skill, index) => (
-            <li key={index} className={styles.skillItem}>
-              <span className={styles.skillName}>{skill.name}</span>
-              <span className={styles.skillLevel}>{skill.level}</span>
-            </li>
-          ))}
-        </ul>
+        </div>
       </section>
     </div>
   );

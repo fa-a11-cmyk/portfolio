@@ -5,15 +5,12 @@
   height: 100%;
 }
 
-.container {
-  margin: 2rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+.header {
+  margin-bottom: 3rem;
 }
 
 .pageTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--accent-color);
   margin-bottom: 1rem;
@@ -22,37 +19,19 @@
 }
 
 .pageSubtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 700px;
   line-height: 1.6;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .pageTitle {
-    font-size: 1.75rem;
-  }
-
-  .pageSubtitle {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
+/* Projects Section */
+.projectsSection {
+  margin-bottom: 4rem;
 }
 
-/* Professional Skills Section */
-.skillsSection {
-  margin-top: 4rem;
-  padding: 2rem;
-}
-
-.skillsSection h2 {
+.projectsSection .sectionTitle {
   font-size: 1.8rem;
   color: var(--accent-color);
   font-weight: 700;
@@ -61,41 +40,63 @@
   padding-bottom: 0.75rem;
 }
 
-.categoriesContainer {
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Skills Section */
+.skillsSection {
+  margin-bottom: 4rem;
+}
+
+.skillsSection .sectionTitle {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.75rem;
+}
+
+.skillsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
-.categoryBlock {
+.skillCategory {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(88, 166, 255, 0.15);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   transition: all 0.3s ease;
 }
 
-.categoryBlock:hover {
+.skillCategory:hover {
   background: rgba(88, 166, 255, 0.08);
   border-color: rgba(88, 166, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .categoryTitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--accent-color);
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(88, 166, 255, 0.2);
 }
 
-.categorySkills {
+.skillsList {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
-.skillCard {
+.skillItem {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(88, 166, 255, 0.2);
   border-radius: 8px;
@@ -103,7 +104,7 @@
   transition: all 0.2s ease;
 }
 
-.skillCard:hover {
+.skillItem:hover {
   background: rgba(88, 166, 255, 0.1);
   border-color: var(--accent-color);
   transform: translateX(4px);
@@ -124,22 +125,6 @@
   margin: 0;
 }
 
-.skillLevel {
-  background: var(--accent-color);
-  color: var(--bg-color);
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.3rem 0.6rem;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-}
-
-.skillLevel:empty {
-  display: none;
-}
-
 .skillDescription {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.65);
@@ -147,54 +132,12 @@
   line-height: 1.4;
 }
 
-/* Technologies & Tools Section */
-.techSection {
-  margin-top: 4rem;
-  padding: 2rem;
-}
-
-.techSection h2 {
-  font-size: 1.8rem;
-  color: var(--accent-color);
-  font-weight: 700;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 0.75rem;
-}
-
-.techList {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.techItem {
-  background: rgba(88, 166, 255, 0.1);
-  border: 1px solid rgba(88, 166, 255, 0.3);
-  color: var(--accent-color);
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-  cursor: default;
-}
-
-.techItem:hover {
-  background: rgba(88, 166, 255, 0.2);
-  border-color: var(--accent-color);
-  transform: scale(1.05);
-}
-
 /* Certifications Section */
 .certSection {
-  margin-top: 4rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
-.certSection h2 {
+.certSection .sectionTitle {
   font-size: 1.8rem;
   color: var(--accent-color);
   font-weight: 700;
@@ -203,63 +146,85 @@
   padding-bottom: 0.75rem;
 }
 
-.certList {
-  list-style: none;
-  padding: 0;
+.certGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .certItem {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(88, 166, 255, 0.2);
-  padding: 1rem 1.5rem;
   border-radius: 8px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
   transition: all 0.2s ease;
 }
 
 .certItem:hover {
   background: rgba(88, 166, 255, 0.1);
   border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.certIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.certContent {
+  flex: 1;
+}
+
+.certTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.5rem 0;
 }
 
 .certYear {
-  font-style: italic;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
-  font-weight: 400;
-  margin-left: 0.5rem;
+  font-style: italic;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.75rem;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .categoriesContainer {
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skillsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .certGrid {
     grid-template-columns: 1fr;
   }
 
-  .techList {
-    flex-direction: column;
-  }
-
-  .techItem {
-    width: 100%;
-  }
-
-  .certList {
-    grid-template-columns: 1fr;
-  }
-
-  .skillsSection,
-  .techSection,
-  .certSection {
-    padding: 1.5rem;
-  }
-
-  .skillsSection h2,
-  .techSection h2,
-  .certSection h2 {
+  .sectionTitle {
     font-size: 1.5rem;
   }
 
