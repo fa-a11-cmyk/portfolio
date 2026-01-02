@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from '@/components/ProjectCard';
+import FileIcons from '@/components/FileIcons';
 import { projects } from '@/data/projects';
 import { skillsCategories, certifications } from '@/data/skillsAndCerts';
 import styles from '@/styles/ProjectsPage.module.css';
@@ -22,6 +23,8 @@ const ProjectsPage = () => {
           ))}
         </div>
       </section>
+
+      <FileIcons />
 
       <section className={styles.skillsSection}>
         <h2 className={styles.sectionTitle}>Skills & Expertise</h2>

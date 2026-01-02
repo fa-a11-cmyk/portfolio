@@ -1,0 +1,78 @@
+.container {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(88, 166, 255, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.fileItem {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(88, 166, 255, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.fileItem:hover {
+  background: rgba(88, 166, 255, 0.1);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+}
+
+.filename {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.25rem 0;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+}
