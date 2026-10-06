@@ -63,4 +63,28 @@ export const projects: Project[] = [
     slug: 'private-cloud-opennebula',
     link: ''
   },
+  {
+    title: 'IDEF - DevOps Improvement Framework',
+    description:
+      'Applied process mining with PM4Py and machine learning to real CI/CD logs to improve delivery productivity using DORA metrics. Presented as a DS2AI 2026 poster.',
+    logo: '/logos/smartovate-icon.svg',
+    slug: 'idef-devops-improvement-framework',
+    link: ''
+  },
+  {
+    title: 'Monitoring & Observability',
+    description:
+      'Created CPU and memory dashboards and alerting with Prometheus and Grafana, enhanced by SageMaker-based machine-learning filtering and AWS Lambda automation.',
+    logo: '/logos/security-icon.svg',
+    slug: 'monitoring-observability',
+    link: ''
+  },
+  {
+    title: 'Private Cloud & Container Orchestration',
+    description:
+      'Administered OpenStack compute, networking, storage and Keystone services, and orchestrated containerized applications with OpenShift and Kubernetes.',
+    logo: '/logos/openstack-icon.svg',
+    slug: 'private-cloud-container-orchestration',
+    link: ''
+  },
 ];
