@@ -1,0 +1,28 @@
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid;
+  margin: 0.25rem 0.4rem 0.25rem 0;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  cursor: default;
+  max-width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(88, 166, 255, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.2rem 0.3rem 0.2rem 0;
+  }
+}

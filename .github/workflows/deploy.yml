@@ -1,4 +1,4 @@
-name: Deploy to Vercel
+name: Build
 
 on:
   push:
@@ -31,15 +31,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-
-      - name: Deploy to Vercel
-        uses: vercel/action@v4
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          production: ${{ github.ref == 'refs/heads/main' }}
-        if: github.event_name == 'push'
 
       - name: Comment PR with deployment URL
         uses: actions/github-script@v6
