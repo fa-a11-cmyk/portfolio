@@ -9,12 +9,30 @@ export interface Article {
   comments_count: number;
 }
 
+export interface Technology {
+  name: string;
+  color?: string;
+}
+
+export interface Metric {
+  label: string;
+  value: string;
+}
+
 export interface Project {
   title: string;
   description: string;
-  logo: string;
   link: string;
   slug: string;
+  category: 'Work' | 'Academic' | 'Personal';
+  date?: string;
+  technologies: Technology[];
+  github?: string;
+  demo?: string;
+  live?: string;
+  metrics?: Metric[];
+  featured?: boolean;
+  color?: string;
 }
 
 export interface Repo {

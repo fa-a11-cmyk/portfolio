@@ -1,30 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
-import FileIcons from '@/components/FileIcons';
+import ProjectFilters from '@/components/ProjectFilters';
 import { projects } from '@/data/projects';
 import { skillsCategories, certifications } from '@/data/skillsAndCerts';
 import styles from '@/styles/ProjectsPage.module.css';
 
 const ProjectsPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const filteredProjects = selectedCategory
+    ? projects.filter(p => p.category === selectedCategory)
+    : projects;
+
+  const featuredProjects = filteredProjects.filter(p => p.featured);
+  const otherProjects = filteredProjects.filter(p => !p.featured);
+
+  const categories = [...new Set(projects.map(p => p.category))];
+
   return (
     <div className={styles.layout}>
       <header className={styles.header}>
         <h1 className={styles.pageTitle}>My Projects</h1>
         <p className={styles.pageSubtitle}>
-          Here&apos;s a collection of my recent work showcasing expertise in cloud infrastructure, DevOps, and full-stack development.
+          A curated collection of my recent work showcasing expertise in DevOps, Cloud Infrastructure, AI Engineering, and full-stack development. Each project includes technologies used, key metrics, and links to source code.
         </p>
       </header>
 
-      <section className={styles.projectsSection}>
-        <h2 className={styles.sectionTitle}>Featured Projects</h2>
-        <div className={styles.projectsGrid}>
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
-      </section>
+      <ProjectFilters
+        onCategoryChange={setSelectedCategory}
+        categories={categories}
+      />
 
-      <FileIcons />
+      {featuredProjects.length > 0 && (
+        <section className={styles.projectsSection}>
+          <h2 className={styles.sectionTitle}>⭐ Featured Projects</h2>
+          <div className={styles.projectsGrid}>
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {otherProjects.length > 0 && (
+        <section className={styles.projectsSection}>
+          <h2 className={styles.sectionTitle}>{featuredProjects.length > 0 ? 'Other ' : ''}Projects</h2>
+          <div className={styles.projectsGrid}>
+            {otherProjects.map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className={styles.skillsSection}>
         <h2 className={styles.sectionTitle}>Skills & Expertise</h2>

@@ -1,90 +1,226 @@
 export interface Project {
   title: string;
   description: string;
-  logo: string;
   slug: string;
   link: string;
+  category: 'Work' | 'Academic' | 'Personal';
+  date?: string;
+  technologies: { name: string; color?: string }[];
+  github?: string;
+  demo?: string;
+  live?: string;
+  metrics?: { label: string; value: string }[];
+  featured?: boolean;
+  color?: string;
+  gradient?: string;
 }
 
 export const projects: Project[] = [
   {
-    title: 'Smartovate',
+    title: 'FastPrint Sahline',
     description:
-      'Advanced backup and disaster recovery solution with multi-cloud support. Seamlessly backup data across AWS, AWS2, and Azure with automated failover capabilities. Enterprise-grade security, real-time monitoring, and compliance management for critical business continuity.',
-    logo: '/logos/smartovate.png',
-    slug: 'smartovate-backup',
-    link: ''
+      'Software Engineer (Current). Developing and deploying a comprehensive platform for print management and operations. Building full-stack solution with Next.js frontend and FastAPI backend, PostgreSQL database for reliable data management. Leading development, testing, and deployment of platform features. Implementing modern DevOps practices for seamless CI/CD pipeline.',
+    slug: 'fastprint-platform',
+    link: '',
+    category: 'Work',
+    date: 'Oct 2026 – Present',
+    featured: true,
+    live: 'https://fastprint.tn',
+    technologies: [
+      { name: 'Next.js' },
+      { name: 'FastAPI' },
+      { name: 'PostgreSQL' },
+      { name: 'TypeScript' },
+      { name: 'Python' },
+      { name: 'DevOps' },
+      { name: 'CI/CD' },
+      { name: 'Platform Development' }
+    ],
+    metrics: [
+      { label: 'Status', value: 'Active Development & Deployment' },
+      { label: 'Stack', value: 'Next.js + FastAPI + PostgreSQL' }
+    ],
+    color: '#00d4ff',
+    gradient: 'linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(88, 166, 255, 0.3))'
   },
   {
-    title: 'OpenStack Cloud Infrastructure',
+    title: 'BraindCode',
     description:
-      'Ongoing 2025 Project: Designing and implementing enterprise-grade cloud infrastructure using OpenStack. Managing compute, storage, and networking resources. Implementing automated deployment pipelines and infrastructure orchestration for scalable cloud solutions.',
-    logo: '/logos/OpenStack.png',
-    slug: 'openstack-cloud-infrastructure',
-    link: ''
+      'DevOps, Cloud & AI Engineer (Mar – Aug 2026). Built Python and Bash internal tools and reusable modules improving operational reliability. Developed RAG-based internal AI agent for analysis and support. Standardized development, staging and production environments using Terraform/Terragrunt. Deployed containerized workloads with Docker/ECS Fargate via Argo CD. Strengthened AWS security through IMDSv2, KMS, IAM hardening.',
+    slug: 'braindcode-devops',
+    link: '',
+    category: 'Work',
+    date: 'Mar 2026 – Aug 2026',
+    featured: true,
+    live: 'https://braindcode.com/',
+    technologies: [
+      { name: 'Python' },
+      { name: 'Bash' },
+      { name: 'Terraform' },
+      { name: 'Docker' },
+      { name: 'ECS Fargate' },
+      { name: 'Argo CD' },
+      { name: 'AWS' },
+      { name: 'RAG/LLM' }
+    ],
+    metrics: [
+      { label: 'Impact', value: 'Improved operational reliability' },
+      { label: 'Environments', value: 'Dev/Staging/Prod standardized' }
+    ],
+    color: '#58a6ff',
+    gradient: 'linear-gradient(135deg, rgba(88, 166, 255, 0.3), rgba(16, 163, 127, 0.3))'
   },
   {
-    title: 'Network Anomaly Detection',
+    title: 'StrideMatch',
     description:
-      'Final Year Project: Implemented comprehensive monitoring solution on AWS infrastructure for real-time network analysis. Collected and analyzed system logs using advanced techniques to identify and resolve network anomalies. Developed automated alerting system for proactive issue detection.',
-    logo: '/logos/sec.png',
-    slug: 'network-anomaly-detection',
-    link: ''
+      'SaaS Developer & DevOps Engineer (Feb – Jun 2026). Built Python/FastAPI backend services and administration interfaces for white-label SaaS platform. Automated product-catalog enrichment with web-scraping daemons. Developed scan-data recommendation engine with independent delivery of fixes, tests and technical documentation. Platform deployed and live in production.',
+    slug: 'stridematch-saas',
+    link: '',
+    category: 'Work',
+    date: 'Feb 2026 – Jun 2026',
+    featured: true,
+    live: 'https://www.stridematch.io/',
+    technologies: [
+      { name: 'Python' },
+      { name: 'FastAPI' },
+      { name: 'Web Scraping' },
+      { name: 'Recommendation Engine' },
+      { name: 'REST APIs' }
+    ],
+    metrics: [
+      { label: 'Status', value: 'Live in Production' },
+      { label: 'Deliverables', value: 'Fixes, Tests, Documentation' }
+    ],
+    color: '#79c0ff',
+    gradient: 'linear-gradient(135deg, rgba(121, 192, 255, 0.3), rgba(255, 107, 53, 0.3))'
   },
   {
-    title: 'Cavario - Equestrian Club Management',
+    title: 'Kinetonic - Software Developer',
     description:
-      'Mobile app for comprehensive equestrian club management including member scheduling and event coordination. Implemented responsive designs and optimized app performance for both iOS and Android platforms using Flutter.',
-    logo: '/logos/Cavario.png',
-    slug: 'cavario-mobile-app',
-    link: ''
+      'Software Developer (Sep 2025 – Apr 2026). Analyzed functional and technical requirements and translated them into application features. Developed, tested and maintained new features and modules ensuring code quality and application stability. Diagnosed and fixed bugs, refactored code to improve maintainability and performance.',
+    slug: 'kinetonic-software',
+    link: '',
+    category: 'Work',
+    date: 'Sep 2025 – Apr 2026',
+    live: 'https://kinetonic.tn',
+    technologies: [
+      { name: 'Full-Stack Development' },
+      { name: 'Bug Fixes' },
+      { name: 'Code Refactoring' },
+      { name: 'Testing' },
+      { name: 'Documentation' }
+    ],
+    gradient: 'linear-gradient(135deg, rgba(100, 200, 200, 0.3), rgba(255, 150, 0, 0.3))'
   },
   {
-    title: 'DevWork Mobile Application',
+    title: 'Smartovate - Cloud & DevOps Engineer',
     description:
-      'Development of Upwork-like mobile application using Flutter (frontend) and Laravel (backend), facilitating contact between employers and jobseekers. User interface design with Figma, applying UX/UI principles. Implementation of RESTful API for backend interaction management.',
-    logo: '/logos/smartovate.png',
-    slug: 'DevWork-mobile-app',
-    link: ''
+      'Cloud & DevOps Engineer Intern (Jul – Sep 2025). Automated multi-cloud deployment of Flask/Next.js application across AWS and Azure using Kubernetes, Terraform and automatic failover. Designed cloud backup architecture and implemented disaster recovery mechanisms for AWS. Ran reliability tests and validated restoration procedures.',
+    slug: 'smartovate-cloud',
+    link: '',
+    category: 'Work',
+    date: 'Jul 2025 – Sep 2025',
+    live: 'https://www.smartovate.com/fr',
+    technologies: [
+      { name: 'Kubernetes' },
+      { name: 'Terraform' },
+      { name: 'AWS' },
+      { name: 'Azure' },
+      { name: 'Disaster Recovery' }
+    ],
+    metrics: [
+      { label: 'Architecture', value: 'Multi-Cloud DR Design' }
+    ]
   },
   {
-    title: 'Library Management System',
+    title: 'Kinetonic - Full-Stack Developer',
     description:
-      'Comprehensive web application using Django framework for managing library catalogs, loans, and user accounts. Integrated SQL database with optimized schema design for efficient data management. Implemented user authentication, authorization, and role-based access control.',
-    logo: '/logos/libr.jpeg',
-    slug: 'library-management-django',
-    link: ''
+      'Full-Stack Developer Intern (Jun – Aug 2024). Built an automated hosting solution to streamline application deployment, configuration and scaling. Improved efficiency, consistency and reliability through REST APIs and Amazon Web Services (AWS) within hybrid delivery team.',
+    slug: 'kinetonic-fullstack',
+    link: '',
+    category: 'Work',
+    date: 'Jun 2024 – Aug 2024',
+    technologies: [
+      { name: 'Full-Stack Development' },
+      { name: 'AWS' },
+      { name: 'REST APIs' },
+      { name: 'Deployment Automation' },
+      { name: 'Infrastructure' }
+    ]
   },
   {
-    title: 'Private Cloud Infrastructure',
+    title: 'Flesk - Mobile Application Developer',
     description:
-      'Configured private cloud infrastructure using OpenNebula to manage virtual machines and network resources. Optimized network connectivity and performance, achieving 15% reduction in latency. Implemented security best practices and access control mechanisms.',
-    logo: '/logos/openn.jpg',
-    slug: 'private-cloud-opennebula',
-    link: ''
+      'Mobile Application Developer Intern (Feb – Jun 2023). Designed and developed a mobile application connecting IT professionals with job opportunities and service providers. Bachelor\'s final-year project demonstrating full mobile development lifecycle and user-centric design principles.',
+    slug: 'flesk-mobile',
+    link: '',
+    category: 'Work',
+    date: 'Feb 2023 – Jun 2023',
+    technologies: [
+      { name: 'Mobile Development' },
+      { name: 'UI/UX Design' },
+      { name: 'User Authentication' },
+      { name: 'Database' },
+      { name: 'API Integration' }
+    ],
+    metrics: [
+      { label: 'Scope', value: 'Bachelor\'s Final Year Project' }
+    ]
   },
   {
     title: 'IDEF - DevOps Improvement Framework',
     description:
-      'Applied process mining with PM4Py and machine learning to real CI/CD logs to improve delivery productivity using DORA metrics. Presented as a DS2AI 2026 poster.',
-    logo: '/logos/smartovate-icon.svg',
-    slug: 'idef-devops-improvement-framework',
-    link: ''
+      'Applied process mining and machine learning to real CI/CD logs to improve delivery productivity using DORA metrics. Research combining PM4Py process mining analysis with ML techniques on actual CI/CD pipeline data. Presented findings as a DS2AI 2026 poster at academic conference.',
+    slug: 'idef-framework',
+    link: '',
+    category: 'Academic',
+    date: '2026',
+    featured: true,
+    technologies: [
+      { name: 'PM4Py' },
+      { name: 'Machine Learning' },
+      { name: 'DORA Metrics' },
+      { name: 'CI/CD Analysis' },
+      { name: 'Process Mining' }
+    ],
+    metrics: [
+      { label: 'Conference', value: 'DS2AI 2026 Poster' }
+    ]
   },
   {
     title: 'Monitoring & Observability',
     description:
-      'Created CPU and memory dashboards and alerting with Prometheus and Grafana, enhanced by SageMaker-based machine-learning filtering and AWS Lambda automation.',
-    logo: '/logos/security-icon.svg',
+      'Created CPU and memory dashboards and alerting enhanced by SageMaker-based ML filtering and AWS Lambda automation. Comprehensive observability solution combining Prometheus metrics collection, Grafana visualization, and intelligent ML-based alert filtering for improved operational insights and faster incident response.',
     slug: 'monitoring-observability',
-    link: ''
+    link: '',
+    category: 'Academic',
+    featured: true,
+    technologies: [
+      { name: 'Prometheus' },
+      { name: 'Grafana' },
+      { name: 'AWS' },
+      { name: 'SageMaker' },
+      { name: 'Lambda' }
+    ],
+    metrics: [
+      { label: 'Dashboards', value: 'CPU, Memory, Custom' },
+      { label: 'Filtering', value: 'ML-Enhanced' }
+    ]
   },
   {
     title: 'Private Cloud & Container Orchestration',
     description:
-      'Administered OpenStack compute, networking, storage and Keystone services, and orchestrated containerized applications with OpenShift and Kubernetes.',
-    logo: '/logos/openstack-icon.svg',
-    slug: 'private-cloud-container-orchestration',
-    link: ''
+      'Administered compute, networking, storage and Keystone services managing enterprise cloud infrastructure. Orchestrated containerized applications with OpenShift and Kubernetes. Comprehensive hands-on experience with private cloud platforms and modern container technologies for production workload management.',
+    slug: 'private-cloud-k8s',
+    link: '',
+    category: 'Academic',
+    featured: true,
+    technologies: [
+      { name: 'OpenStack' },
+      { name: 'Kubernetes' },
+      { name: 'OpenShift' },
+      { name: 'Container Orchestration' },
+      { name: 'Cloud Infrastructure' }
+    ]
   },
 ];

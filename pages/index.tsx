@@ -17,7 +17,7 @@ export default function HomePage() {
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Fatma Adel',", type: 'array-item' },
     { code: "    role: 'Cloud & DevOps Engineer',", type: 'array-item' },
-    { code: "    bio: 'Final Year Student | Triple Certified | Multi-Cloud Expert'", type: 'array-item' },
+    { code: "    bio: 'Junior Software Engineer | DevOps, Cloud & AI | AWS, Azure & GCP Certified'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className={styles.developerRole}>Cloud & DevOps Engineer</div>
 
          <p className={styles.bio}>
-Final Year Student at EPI Sousse | AWS, Azure & GCP Certified | Skilled in Kubernetes, Terraform, CI/CD, Docker, and monitoring solutions. Seeking a 6-month internship to contribute to innovative cloud infrastructure projects and drive operational excellence.
+Junior Software Engineer specializing in DevOps, Cloud & AI. AWS, Azure & GCP Certified. Experienced with Kubernetes, Terraform, CI/CD, Docker, and cloud infrastructure. Building reliable systems and driving operational excellence through automation and best practices.
 </p>
 
 
