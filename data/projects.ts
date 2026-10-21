@@ -17,6 +17,34 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'CinemApp — Full-Stack Movie Platform',
+    description:
+      'Full-stack MERN application for movie exploration, bookmarks and user management. Features stateless JWT authentication with bcrypt salting, resilient OMDB REST API integration with asynchronous plot enrichment, MongoDB persistence with in-memory fallback, and responsive dark cinema design.',
+    slug: 'cinemapp-movie-platform',
+    link: 'https://github.com/fa-a11-cmyk/CinemApp',
+    github: 'https://github.com/fa-a11-cmyk/CinemApp',
+    category: 'Personal',
+    date: 'Oct 2026',
+    featured: true,
+    technologies: [
+      { name: 'React.js' },
+      { name: 'Node.js' },
+      { name: 'Express' },
+      { name: 'MongoDB' },
+      { name: 'JWT' },
+      { name: 'bcrypt' },
+      { name: 'OMDB API' },
+      { name: 'Vite' }
+    ],
+    metrics: [
+      { label: 'Architecture', value: 'MERN Stack + Stateless JWT' },
+      { label: 'API Integration', value: 'OMDB REST API + Batch Enrichment' },
+      { label: 'Security', value: 'bcrypt (10 rounds) + Route Guards' }
+    ],
+    color: '#f59e0b',
+    gradient: 'linear-gradient(135deg, rgba(245, 158, 11, 0.3), rgba(6, 182, 212, 0.3))'
+  },
+  {
     title: 'FastPrint Sahline',
     description:
       'Software Engineer (Current). Developing and deploying a comprehensive platform for print management and operations. Building full-stack solution with Next.js frontend and FastAPI backend, PostgreSQL database for reliable data management. Leading development, testing, and deployment of platform features. Implementing modern DevOps practices for seamless CI/CD pipeline.',
