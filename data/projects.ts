@@ -53,7 +53,7 @@ export const projects: Project[] = [
     category: 'Work',
     date: 'Oct 2026 – Present',
     featured: true,
-    live: 'https://fastprint.tn',
+    live: 'https://www.fast-print-sahline.com/',
     technologies: [
       { name: 'Next.js' },
       { name: 'FastAPI' },
@@ -70,6 +70,30 @@ export const projects: Project[] = [
     ],
     color: '#00d4ff',
     gradient: 'linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(88, 166, 255, 0.3))'
+  },
+  {
+    title: 'Microservices on Kubernetes',
+    description:
+      'A local Kubernetes demo deploying a containerized frontend and FastAPI service with PostgreSQL and Redis. Includes Helm-based deployments, autoscaling, ingress, GitHub Actions CI/CD, and observability with Prometheus, Grafana, and Loki.',
+    slug: 'kubernetes-microservices',
+    link: '',
+    github: 'https://github.com/fa-a11-cmyk/Kubernets',
+    category: 'Personal',
+    featured: true,
+    technologies: [
+      { name: 'Kubernetes' },
+      { name: 'Helm' },
+      { name: 'Docker' },
+      { name: 'FastAPI' },
+      { name: 'PostgreSQL' },
+      { name: 'Redis' },
+      { name: 'Prometheus' },
+      { name: 'Grafana' },
+      { name: 'Loki' },
+      { name: 'GitHub Actions' }
+    ],
+    color: '#326ce5',
+    gradient: 'linear-gradient(135deg, rgba(50, 108, 229, 0.3), rgba(16, 163, 127, 0.3))'
   },
   {
     title: 'BraindCode',
